@@ -4,38 +4,38 @@ variable "vpc_cidr" {
   type = string
 }
 
-variable "public-subnet-1-cidr" {
+variable "public-subnet-az1-cidr" {
   default = "10.0.0.0/24"
-  description = "Pulic subnet 1 CIDR Block"
+  description = "Pulic subnet az1 CIDR Block"
   type = string
 }
 
-variable "public-subnet-2-cidr" {
+variable "public-subnet-az2-cidr" {
   default = "10.0.1.0/24"
-  description = "Pulic subnet 2 CIDR Block"
+  description = "Pulic subnet az2 CIDR Block"
   type = string
 }
 
-variable "private-subnet-1-cidr" {
+variable "private-app-subnet-az1-cidr" {
   default = "10.0.2.0/24"
-  description = "Private subnet 1 CIDR Block"
+  description = "Private app subnet az1 CIDR Block"
   type = string
 }
 
-variable "private-subnet-2-cidr" {
+variable "private-app-subnet-az2-cidr" {
   default = "10.0.3.0/24"
-  description = "Private subnet 2 CIDR Block"
+  description = "Private app subnet az2 CIDR Block"
   type = string
 }
 
-variable "private-subnet-3-cidr" {
+variable "private-data-subnet-az1-cidr" {
   default = "10.0.4.0/24"
-  description = "Private subnet 3 CIDR Block"
+  description = "Private data subnet az1 CIDR Block"
   type = string
 }
 
-variable "private-subnet-4-cidr" {
+variable "private-data-subnet-az2-cidr" {
   default = "10.0.5.0/24"
-  description = "Private subnet 4 CIDR Block"
+  description = "Private data subnet az2 CIDR Block"
   type = string
 }

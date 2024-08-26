@@ -3,19 +3,18 @@ resource "random_password" "master_password" {
   special = false
 }
 
-
 resource "aws_db_instance" "default" {
   identifier             = "mi-base-dato-test-instance"
   instance_class         = "db.t3.micro"
   allocated_storage      = 5
   engine                 = "postgres"
   engine_version         = "16.3"
-  username             = "newuser"
-  password             = random_password.master_password.result
+  username               = "newuser"
+  password               = random_password.master_password.result
   parameter_group_name   = aws_db_parameter_group.education.name
-  skip_final_snapshot  = true
-  publicly_accessible = true
-  db_name = "mi_base_dato_test_db"
+  skip_final_snapshot    = true
+  publicly_accessible    = true
+  db_name                = "mi_base_dato_test_db"
 }
 
 resource "aws_db_parameter_group" "education" {
@@ -30,7 +29,7 @@ resource "aws_db_parameter_group" "education" {
 
 resource "aws_secretsmanager_secret" "rds_secret" {
   kms_key_id   ="arn:aws:kms:us-west-2:715841370957:key/fce7c2d0-9c98-403c-8010-a54f91db9d35"                 
-  name          = "credential4-mi-base-dato-test"
+  name          = "credential5-mi-base-dato-test"
   description = "credential bd"
 }
 
